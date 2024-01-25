@@ -1,0 +1,61 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: mainFontCaptal;
+    src: url(./Fonts/BebasNeue-Regular.otf);
+}
+
+@font-face {
+    font-family: mainFontNormal;
+    src: url(./Fonts/BebasNeue-Regular.woff);
+}
+
+:root{
+    --svg-dark-color : #475569;
+    --svg-light-color : #94a3b8;
+}
+
+/* svg animation */
+
+svg{
+    cursor: pointer;
+}
+
+#dark{
+    fill: var(--svg-dark-color);
+}
+
+#light{
+    fill: var(--svg-light-color);
+}
+
+#dark_1,
+#dark_2,
+#light_2{
+    transition: all 1s ease;
+}
+
+#dark_2{
+    transform: translateX(-100%);
+}
+
+svg:hover #light_2{
+    transform: translateX(20%);
+}
+
+svg:hover #dark_1{
+    transform: translateX(40%);
+    opacity: 0;
+}
+
+svg:hover #dark_2{
+    transform: translateX(0%);
+}
+
+img{
+    height: 50px;
+    width: 50px;
+}
