@@ -16,7 +16,10 @@
 :root{
     --svg-dark-color : #475569;
     --svg-light-color : #94a3b8;
-}
+    --main-color-dark : #115e59;
+    --main-color-light : #2dd4bf;
+    --side-bar-text-font-color: #f3f4f6;
+} 
 
 /* svg animation */
 
@@ -55,7 +58,105 @@ svg:hover #dark_2{
     transform: translateX(0%);
 }
 
+
+/* universal styles */
+
+ul li{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
 img{
     height: 50px;
     width: 50px;
+}
+
+/* icon color */
+
+.upper-set .icon, .lower-set .icon, .logo-container .icon{
+    color: var(--side-bar-text-font-color);
+}
+
+.upper-set .icon img, .lower-set .icon img, .logo-container .icon img{
+    filter: brightness(0) invert(87%) sepia(2%) saturate(1083%) hue-rotate(217deg);
+}
+
+/* Main page layout */
+
+.main-col-layout{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+/* side bar */
+
+/* .sidebar-container{
+    background-color: var(--main-color-dark);
+    padding-top: 2rem;
+    padding-left: 2rem;
+}
+
+.sidebar-container .icon{
+    padding-right: 1.3rem;
+}
+
+.sidebar-container .icon-text p{
+    color: var(--side-bar-text-font-color);
+    font-family: mainFontNormal;
+    font-size: min(2rem , 2.4rem);
+}
+
+.first-sidebar-set{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+} */
+
+.logo-container{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    align-items: center;
+}
+
+.sidebar-container{
+    display: grid;
+    grid-template-rows: 0.5fr 5fr ;
+    background-color: var(--main-color-dark);
+    padding-left: 2rem;
+    padding-top: 2rem;
+}
+
+.sidebar-container .icon{
+    padding-right: 1.5rem;
+}
+
+.first-sidebar-set{
+    /* border: 1px solid black; */
+    padding: 2rem 0;
+}
+
+.second-sidebar-set{
+    /* border: 1px solid black; */
+    padding-bottom: 2rem;
+}
+
+.sidebar-icons-and-content li{
+    padding-bottom: 1.5rem;
+}
+
+.sidebar-icons-and-content .icon-text p{
+    font-family: mainFontNormal;
+    font-size: 2rem;
+    color: var(--side-bar-text-font-color);
+}
+
+.logo-container .icon img{
+    height: 75px;
+    width: 75px;
+}
+
+.logo-container .icon-text p{
+    font-family: mainFontNormal;
+    font-size: 3.5rem;
+    color: var(--side-bar-text-font-color);
 }
